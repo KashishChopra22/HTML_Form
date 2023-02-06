@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #D5D8DC;
+        }
+
+        form {
+            text-align: center;
+            background-color: hwb(0 50% 50% / 0.815);
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+
+        table {
+            height: 600px;
+            width: 700px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        tr {
+            padding: 20px;
+            width: 200px;
+            text-align: left;
+            padding-left: 50%;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        input[type=text],
+        input[type=date],
+        select {
+            height: 20px;
+        }
+
+        select,
+        input[type=date] {
+            width: 185px;
+        }
+
+       .formcenter{
+        text-align: center;
+       }
+       .gen{
+        font-size: 16px;
+        font-weight: 300;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Form</h1> 
+        <form name="nameForm" action="" onsubmit="return validateForm()">
+           <div class="formcenter">
+            <table>
+                <tr>
+                    <td><label for="name">Employee Name</label></td>
+                    <td><input type="text" name="name" id="name" size="20" pattern="[a-zA-Z]*" maxlength="84" placeholder="Type here" required></td>
+                   
+                </tr>
+
+                <tr>
+                    <td><label for="age">Age</label></td>
+                    <td><input type="number" name="age" id="age" size="20" placeholder="Type here" required></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender</label></td>
+                    <td><input type="radio" name="gender" id="gender" value="Male" required><label class="gen">Male</label>
+                        <input type="radio" name="gender" id="gender" value="Female"><label class="gen">Female</label>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="designation">Designation</label></td>
+                    <td><select name="designation" id="designation">
+                            <option value="trainee">Trainee</option>
+                            <option value="hod">HOD</option>
+                            <option value="manager">Manager</option>
+                            <option value="ceo">CEO</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td><label for="salary">Salary</label></td>
+                    <td><input type="number" name="salary" id="salary" size="20" maxlength="5" placeholder="Type here" required></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="location">Location</label></td>
+                    <td><select name="location" id="location">
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="UP">UP</option>
+                            <option value="other">Other</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email Id</label></td>
+                    <td><input type="text" name="email" id="email" size="20" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" placeholder="Type here" required></td>
+                    
+                </tr>
+                <tr>
+                    <td><label for="doj">Date of Joining</label></td>
+                    <td><input type="date" name="doj" id="doj" size="20" required></td>
+                    
+                </tr>
+
+                <tr>
+                    <td><label for="contact">Contact Number</label></td>
+                    <td><input type="text" name="contact" id="contact" size="20" maxlength="10" pattern="[7-9]{1}[0-9]{9}" 
+                        title="Phone number start with 7-9 and remaining 9 digits with 0-9 required" placeholder="Type here" required></td>
+                   
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Submit" style="cursor: pointer; background-color: rgb(0, 195, 255); padding: 10px; text-align: center;"></td>
+                </tr>
+            </table>
+            <!-- <input type="submit" value="Submit" style="cursor: pointer; background-color: rgb(0, 195, 255); padding: 10px; text-align: center;"> -->
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+   
+</script>
+</html>
